@@ -1,0 +1,21 @@
+{
+  "name": "chat-system",
+  "version": "1.0.0",
+  "description": "Distributed Chat System",
+  "main": "server1.js",
+  "scripts": {
+    "server1": "node server1.js",
+    "server2": "node server2.js",
+    "dev": "concurrently \"npm run server1\" \"npm run server2\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
+    "redis": "^4.6.8",
+    "@socket.io/redis-adapter": "^8.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

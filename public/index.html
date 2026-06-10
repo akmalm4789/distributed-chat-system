@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCom Solutions - Distributed Chat System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="connection-status" id="connection-status">Connecting...</div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-info">
+                <h3>Your Information</h3>
+                <input type="text" id="username-input" placeholder="Enter your name" maxlength="30">
+                <button id="join-btn" disabled>Join Chat</button>
+            </div>
+            
+            <div class="users-section">
+                <h3>Connected Users (<span id="user-count">0</span>)</h3>
+                <ul id="users-list"></ul>
+            </div>
+        </div>
+        
+        <div class="main-chat">
+            <div class="chat-header">
+                <h2>TechCom Solutions - Distributed Chat</h2>
+                <p>Connected to: <span id="server-info">Not connected</span></p>
+            </div>
+            
+            <div class="messages-container" id="messages-container"></div>
+            
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type your message..." disabled>
+                <button id="send-btn" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
